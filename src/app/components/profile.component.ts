@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GithubService } from '../services/github.service';
 
 @Component({
     moduleId: module.id,
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
   //styleUrls: ['./app.component.css']
 })
 export class ProfileComponent {
-  title = 'app';
+  constructor(private _githubService: GithubService){
+      this._githubService.getUser().subscribe(user => {
+        console.log(user);
+      });
+  }
 }
