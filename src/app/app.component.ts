@@ -3,7 +3,7 @@ import { GithubService } from './services/github.service';
 
 @Component({
   selector: 'app-root',
-  template: '<profile></profile>',
+  templateUrl: './app.component.html',
   providers: [GithubService]
 })
 export class AppComponent {

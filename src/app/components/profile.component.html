@@ -1,1 +1,25 @@
-PROFILE
+<div *ngIf="user">
+    <nav class="navbar navbar-light bg-light">
+        <div class="navbar-brand">
+            {{ user.login }}
+        </div>
+    </nav>
+    <nav class="navbar navbar-light bg-light">
+        <span class="navbar-text">
+            <div class="row">
+                    <div class="col-md-4">
+                        <img class="img-thumbnail" src="{{ user.avatar_url }}" />
+                        <a class="btn btn-default btn-block" href="">Click ME</a>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="stats">
+                            <h3>{{ user.public_repos }} <span class="badge badge-secondary">Public Repos</span></h3>
+                            <h4>{{ user.public_gists }} <span class="badge badge-secondary">Public Gists</span></h4>
+                            <h5>{{ user.followers }} <span class="badge badge-secondary">Followers</span></h5>
+                            <h6>{{ user.following }} <span class="badge badge-secondary">Following</span></h6>
+                        </div>
+                    </div>
+            </div>
+        </span>
+    </nav>
+</div>
